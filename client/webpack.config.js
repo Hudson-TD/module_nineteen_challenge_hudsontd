@@ -9,6 +9,9 @@ module.exports = () => {
     entry: {
       main: "./src/js/index.js",
       install: "./src/js/install.js",
+      database: "./src/js/database.js",
+      editor: "./src/js/editor.js",
+      header: "./src/js/header.js",
     },
     output: {
       filename: "[name].bundle.js",
@@ -17,7 +20,7 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         title: "J.A.T.E",
-        template: "index.html",
+        template: "./index.html",
       }),
       new InjectManifest({
         swSrc: "./src-sw.js",
@@ -31,6 +34,8 @@ module.exports = () => {
         description: "Takes notes with JavaScript syntax and highlighting!",
         background_color: "#225ca3",
         theme_color: "#225ca3",
+        start_url: "/",
+        publicPath: "/",
         icons: [
           {
             src: path.resolve("src/images/logo.png"),
