@@ -19,20 +19,19 @@ export const putDb = async (content) => {
   const store = tx.objectStore("jate");
   const request = store.put({ id: 1, value: content });
   const result = await request;
-  console.log("✔️ data saved to the database", result);
-  return result;
+  console.log("✔️ data saved to the database: ", content);
 };
 
 // GET Route
-export const getDb = async (data) => {
-  console.log(data);
-  const jateDb = await openDB("jate", 1);
-  const tx = jateDb.transaction("jate", "readonly");
+export const getDb = async () => {
+  console.log("GET from the database");
+  const contactDb = await openDB("jate", 1);
+  const tx = contactDb.transaction("jate", "readonly");
   const store = tx.objectStore("jate");
   const request = store.getAll();
   const result = await request;
   console.log("✔️ data retrieved from the database", result);
-  return result;
+  return result?.value;
 };
 
 initdb();
