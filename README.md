@@ -20,7 +20,7 @@ https://secret-citadel-27288.herokuapp.com/
 
 ## Usage
 
-Type any code snippet or notes in the editor. Content is saved in the IndexedDB and will display when you reopen the text editor after closing it. The application has an autosave functionality when the element loses focus.
+Type any code snippet or notes in the text editor. Content is saved in the IndexedDB and will display when you reopen the text editor after closing it. The application has an autosave functionality when the element loses focus.
 
 ##  Technologies used
 
@@ -41,3 +41,5 @@ Please email any questions to: tylerhudson96@gmail.com
 Find me on GitHub: [Hudson-td](https://github.com/Hudson-td)
 
 ## Screenshot
+
+[![J-A-T-E-Capture.png](https://i.postimg.cc/FstWwGgB/J-A-T-E-Capture.png)](https://postimg.cc/5j3SCBrB)
