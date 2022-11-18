@@ -1,19 +1,19 @@
-const butInstall = document.getElementById("buttonInstall");
+const buttonInstall = document.getElementById("buttonInstall");
 
 window.addEventListener("beforeinstallprompt", (event) => {
   window.deferredPrompt = event;
-  event.preventDefault();
-  butInstall.classList.toggle("hidden", false);
+  buttonInstall.classList.toggle("hidden", false);
 });
 
-butInstall.addEventListener("click", async () => {
+buttonInstall.addEventListener("click", async () => {
+  console.log("clicked");
   const promptClicked = window.deferredPrompt;
   if (!promptClicked) {
     return;
   }
   promptClicked.prompt();
   window.deferredPrompt = null;
-  butInstall.classList.toggle("hidden", true);
+  buttonInstall.classList.toggle("hidden", true);
 });
 
 window.addEventListener("appinstalled", (event) => {
